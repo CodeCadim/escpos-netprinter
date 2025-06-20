@@ -8,7 +8,7 @@ use ReceiptPrintHq\EscposTools\Parser\Context\Code2DStateStorage;
 use ReceiptPrintHq\EscposTools\Parser\Parser;
 use ReceiptPrintHq\EscposTools\Parser\Context\InlineFormatting;
 
-$debugMode = false;
+$debugMode = true;
 $targetFilename = "";
 
 error_log("esc2html starting", 0);
@@ -172,7 +172,7 @@ foreach ($commands as $cmd) {
 const CSS_FILE = __DIR__ . "/src/resources/esc2html.css";
 $metaInfo = array_merge(
     array(
-        "<meta charset=\"UTF-8\">",
+        "<meta charset=\"iso-8859-15\">",
         "<style>"
     ),
     explode("\n", trim(file_get_contents(CSS_FILE))),

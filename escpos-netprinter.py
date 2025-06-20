@@ -30,7 +30,7 @@ class ESCPOSHandler(socketserver.StreamRequestHandler):
         Voir l'APG Epson section "Processing the Data Received from the Printer"
     """
     timeout = 10  #On abandonne une réception après 10 secondes - un compromis pour assurer que tout passe sans se bourrer de connections zombies.
-    netprinter_debugmode = "false"
+    netprinter_debugmode = "true"
     
     # Receive the print data and dump it in a file.
     def handle(self):
