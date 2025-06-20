@@ -20,15 +20,15 @@ This project requires:
 To install v3.0 from source:
 
 ```bash
-wget --show-progress https://github.com/gilbertfl/escpos-netprinter/archive/refs/tags/3.0.zip
-unzip 3.0.zip 
-cd escpos-netprinter-3.0
-docker build -t escpos-netprinter:3.0 .
+wget --show-progress https://github.com/gilbertfl/escpos-netprinter/archive/refs/tags/3.1.zip
+unzip 3.1.zip 
+cd escpos-netprinter-3.1
+docker build -t escpos-netprinter:3.1 .
 ```
 
 To run the resulting container:
 ```bash
-docker run -d --rm --name escpos_netprinter -p 515:515/tcp -p 80:80/tcp -p 9100:9100/tcp escpos-netprinter:3.0
+docker run -d --rm --name escpos_netprinter -p 515:515/tcp -p 8080:80/tcp -p 9100:9100/tcp escpos-netprinter:3.1
 ```
 It should now accept prints by JetDirect on the default port(9100) and by lpd on the default port(515), and you can visualize it with the web application at port 80.  
 For debugging, you can add port 631 to access the CUPS interface.   The CUPS administrative username is `cupsadmin` and the password is `123456`.
